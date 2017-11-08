@@ -5,7 +5,7 @@ plot([left_end(1),right_end(1)],[left_end(2),right_end(2)],'k',...
     'LineWidth',.25)
 
 % draw hinges
-L = .08/2*sqrt(2);
+L = .04;
 theta = linspace(0,2*pi,100);
 x = L*cos(theta);
 y = L*sin(theta);
