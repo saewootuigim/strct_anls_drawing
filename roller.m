@@ -15,12 +15,18 @@ fill([P1_rot(1),P2_rot(1),P3_rot(1)]+x,[P1_rot(2),P2_rot(2),P3_rot(2)]+y,'k')
 % draw circles
 th = linspace(0,2*pi,30);
 r = L/6;
-Pcircle = [r*cos(th)',r*sin(th)'-L*sqrt(3)/2-r];
+
+Pcircle = [r*cos(th)'-6/4*r,r*sin(th)'-L*sqrt(3)/2-r];
 Pcircle_rot = rotate(Pcircle,theta);
 xr = Pcircle_rot(:,1);
 yr = Pcircle_rot(:,2);
-plot(xr-6/4*r+x,yr+y,'k')
-plot(xr+6/4*r+x,yr+y,'k')
+plot(xr+x,yr+y,'k')
+
+Pcircle = [r*cos(th)'+6/4*r,r*sin(th)'-L*sqrt(3)/2-r];
+Pcircle_rot = rotate(Pcircle,theta);
+xr = Pcircle_rot(:,1);
+yr = Pcircle_rot(:,2);
+plot(xr+x,yr+y,'k')
 
 % draw a straight line
 P4 = [-L,P1(2)-2*r];

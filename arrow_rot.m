@@ -12,10 +12,11 @@ for i = 1 : length(th)
 end
 plot(P(:,1)+center_x,P(:,2)+center_y,'k')
 
+gamma = 2*asin(.1/2/r);
 if strcmp(dir,'ccw')
-    [X,Y] = arrowhead(center_x+P(end,1),center_y+P(end,2),position+center_degree/2.7);
+    [X,Y] = arrowhead(center_x+P(end,1),center_y+P(end,2),position+center_degree/2-gamma);
     fill(X,Y,'k')
 else
-    [X,Y] = arrowhead(center_x+P(1,1),center_y+P(1,2),position-center_degree/2.7+pi);
+    [X,Y] = arrowhead(center_x+P(1,1),center_y+P(1,2),position-center_degree/2+pi-gamma);
     fill(X,Y,'k')
 end
