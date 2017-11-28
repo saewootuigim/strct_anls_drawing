@@ -2,7 +2,7 @@ function springP(x,y,angle)
 
 m = .2;
 
-xx=[0,1]*.2;
+xx=[0,1]*.15;
 yy=m*xx;
 d = sum(abs(yy));
 P = rotate([0,0;0,-d],angle);
@@ -10,7 +10,7 @@ plot(P(:,1)+x,P(:,2)+y,'k')
 P = rotate([xx',-d-yy'],angle);
 plot(P(:,1)+x,P(:,2)+y,'k')
 
-xx = [-1,1]*.2;
+xx = [-1,1]*.15;
 yy = m*xx;
 d = sum(abs(yy));
 
@@ -21,7 +21,7 @@ for i = 1 : 2
     plot(P(:,1)+x,P(:,2)+y,'k')
 end
 
-xx=[0,1]*.2;
+xx=[0,1]*.15;
 yy=m*xx;
 d = sum(abs(yy));
 P = rotate([xx',-11*d+yy'],angle);
